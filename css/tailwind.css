@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+
+#menu {
+    @apply border-r border-text border-solid h-screen p-16 bg-white;
+    width: 20%;
+}
+
+#menu li{
+    @apply my-6 text-nav font-medium;
+}
+
+#menu li i {
+    font-size: 20px;
+}
+
+#menu li span{
+    @apply ml-2;
+}
+
+#menu li a:hover{
+    @apply text-primary;
+}
