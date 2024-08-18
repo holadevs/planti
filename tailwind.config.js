@@ -8,7 +8,8 @@ module.exports = {
         background: '#f7f8fa',
         'light-green': '#c0f397',
         text: '#dcdddf',
-        nav: '#828282'
+        nav: '#828282',
+        'green-help': '#dff9ca',
       }
     },
   },

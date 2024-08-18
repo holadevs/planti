@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body, h1{
     font-family: "Roboto", sans-serif;
 }
 
 
 #menu {
-    @apply border-r border-text border-solid h-screen p-16 bg-white;
+    @apply border-r border-text border-solid h-auto p-8 bg-white;
     width: 20%;
 }
 
@@ -24,6 +24,71 @@ body{
     @apply ml-2;
 }
 
+#menu li a{
+    @apply flex items-center;
+    transition: color 300ms ease-in;
+}
+
+#menu li a::before{
+    content: '';
+    width: 6px;
+    height: 35px;
+    @apply bg-primary;
+    display: block;
+    position: absolute;
+    left: 0;
+    border-radius: 0px 10px 10px 0px;
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+
 #menu li a:hover{
     @apply text-primary;
+}
+
+#menu li a:hover::before{
+    opacity: 1;
+}
+
+.white-circle{
+    @apply bg-white rounded-full flex items-center justify-center z-20 relative;
+    width: 75px;
+    height: 75px;
+    margin: 0px auto -30px;
+    box-shadow: 0px 7px 10px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-help{
+    @apply  text-center bg-light-green p-6 rounded-lg relative overflow-hidden z-10;
+}
+
+.card-help::after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    @apply rounded-full bg-green-help block absolute;
+    right: -100px;
+    bottom: -100px;
+    z-index: 0;
+}
+
+.card-help::before{
+    content: '';
+    width: 150px;
+    height: 150px;
+    @apply rounded-full bg-green-help block absolute;
+    left: -100px;
+    top: -100px;
+    z-index: 0;
+}
+
+.white-circle div{
+    @apply bg-light-green rounded-full flex items-center justify-center font-bold;
+    -webkit-text-stroke: 1px black;
+    width: 40px;
+    height: 40px;
+}
+
+a.go-to{
+    @apply mt-4 bg-white rounded-lg py-2 px-8 block z-10 relative;
 }
